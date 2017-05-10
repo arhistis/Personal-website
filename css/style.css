@@ -1,0 +1,1053 @@
+@font-face {
+    font-family: 'Bit-Daylong11-sRB';
+    src:url('Bit-Daylong11-sRB.ttf.woff') format('woff'),
+        url('Bit-Daylong11-sRB.ttf.svg#Bit-Daylong11-sRB') format('svg'),
+        url('Bit-Daylong11-sRB.ttf.eot'),
+        url('Bit-Daylong11-sRB.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans',sans-serif;
+	color: #eee;
+}
+
+ul{
+	list-style-type: none;
+}
+
+
+a,a:hover,a:active{
+	text-decoration: none;
+}
+
+html, body{
+	height: 100%;
+}
+
+.flex{ display: flex; }
+.upper{ text-transform: uppercase; }
+
+.sect{
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	overflow: hidden;
+}
+
+.subSection{
+	height: 100%;
+	background-color: bisque;
+}
+
+.sectOne{
+	background-image: url("../img/universe1.jpg");
+}
+.secTwo{
+	background-image: url("../img/scorpion.jpg");
+}
+.secThree{
+	background-image: url("../img/img2.jpg");
+}
+
+.text-center{
+	text-align: center;
+}
+
+.clearfix:after {
+    content:"";
+    display:table;
+    clear:both;
+}
+
+.header{
+	height: 100%;
+	width: 100%;
+	background-image: url("../img/face_shadow.png");
+	background-position: center;
+	background-size: cover;
+	display: flex;
+}
+
+article
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
+	float: left;
+}
+
+article > h1, article > p
+{
+	position: relative;
+	min-width: 300px;
+	width: 50%;
+	margin: 0 auto;
+	padding-bottom: 15px;
+}
+
+article > h1{
+	font-size: 2.3em;
+	border-bottom: solid 1px #eee;
+	margin-bottom: 15px;
+	text-indent: 1em;
+	font-weight: 400;
+}
+
+article > h1::after, article > h1::before, article > p::after, article > p::before{
+	content: "";
+	position: absolute;
+	display: block;
+}
+
+article > p > span{
+	width: 40px;
+	height: 1px;
+	background-color: #eee;
+	position: absolute;
+	bottom: 0px;
+	right: 0;
+}
+
+article > h1::after{
+	bottom: 0px;
+	left: 0;
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid #eee;
+}
+article > h1::before{
+	bottom: -16px;
+	left: -7px;
+	width: 17px; 
+	height: 25px; 
+	border-top: 1px solid #eee;
+	border-left: 1px solid #eee;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+article > p::after{
+	bottom: -5px;
+	right: 0;
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #eee;
+}
+article > p::before{
+	bottom: -10px;
+	right: -7px;
+	width: 17px; 
+	height: 25px; 
+	border-bottom: 1px solid #eee;
+	border-right: 1px solid #eee;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+article > p 
+{
+	font-size: 1.2em;
+	text-indent: 2em;
+}
+
+nav{
+	display: flex;
+	float: right;
+	width: 20%;
+	min-width: 250px;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: auto;
+}
+
+.expand{
+	display: none;
+}
+
+nav>ul>li>a{
+	color: #051725;
+	font-size: 2em;
+	font-weight: 600;
+}
+
+nav > ul > li > span{
+	display: none;
+	color: #051725;
+	font-size: 2em;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+nav>ul>li>ul>li>a{
+	color: #051725;
+	font-size: 1.5em;
+}
+
+nav>ul>li>ul{
+	overflow: hidden;
+  	opacity: 0;
+  	max-height: 0;
+  	-webkit-transition: max-height 0.5s, opacity 0.1s linear;
+	-moz-transition: max-height 0.5s, opacity 0.1s linear;
+	transition: max-height 0.5s ease, opacity 0.1s linear;
+}
+
+nav>ul>li:hover>ul{
+	visibility: visible;
+  	opacity: 1;
+  	max-height: 100px;
+}
+
+.projects{
+	background-image: url('../img/subtile_white.png');
+	height: auto;
+}
+
+.projects > h1, .origami > h1, .contact > div > h1{
+	font-size: 3em;
+	text-align: center;
+	font-weight: 600;
+	padding: 70px 0;
+	width: 70%;
+	margin: 0 auto;
+	color: #051725;
+}
+
+.projects > h1
+{
+	border-bottom: solid 1px #051725;
+}
+
+.carousel{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 70px 150px;
+	overflow: hidden;
+	position: relative;
+}
+
+.carousel-control{
+	position: absolute;
+	width: 150px;
+	top: 70px;
+	bottom: 70px;
+	float: left;
+	display: flex;
+}
+
+.carousel-control.left{
+	left: 0;
+}
+.carousel-control.right{
+	right: 0;
+}
+.carousel-control.left > i{
+	margin-left: auto;
+}
+.carousel-control > i{
+	width: 100px;
+	color: #051725;
+	display: flex;
+	font-size: 24px;
+	text-align: center;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+}
+
+.right{
+	float: right;
+}
+
+.item{
+	width: 33.33%;
+	float: left;
+}
+.item > a > img{
+	width: 100%;
+	height: auto;
+}
+
+.selected-item{
+	width: 100%;
+	background-image: url("../img/irongrip.png");
+	padding-bottom: 35px;
+}
+
+.selected-item > time{
+	margin-left: 26%;
+}
+.selected-item > small{
+	color: #19aab5;
+	float: right;
+	margin-right: 26%;
+}
+
+.selected-item > img{
+	width: 50%;
+	margin: 0 auto;
+	height: auto;
+	display: block;
+	padding: 35px 0 10px 0;
+}
+
+.selected-item > h2{
+	padding: 15px 0 20px 0;
+	margin: 0 auto 20px auto;
+	width: 20%;
+	color: #f6f7f3;
+	font-size: 1.7em;
+	border-bottom: solid 1px #19aab5;
+}
+
+.selected-item > p{
+	width: 40%;
+	margin: 0 auto;
+}
+
+.btn-case{
+	margin: 35px auto 0;
+	width: 160px;
+	height: 40px;
+	padding: 5px;
+	border: solid 1px #f6f7f3;
+	/*box-shadow: rgba(139, 207, 247, 0.3) 0px 0px 33px;*/
+}
+
+.btn{
+	color: #333;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #f6f7f3;
+	letter-spacing: 1.5px;
+	font-size: 0.85em;
+}
+
+.projects > hr{
+	border: 0;
+	margin: 0 auto;
+	border-top: solid 1px #051725;
+	padding-bottom: 70px;
+
+}
+
+
+.origami{
+	position: relative;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.origami > h1{
+	position: absolute;
+	left: 0;
+	right: 0;
+	background-image: url('../img/origami.png');
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: contain;
+}
+
+.origami > article{
+	margin: 20% 0 20% 0;
+}
+
+.origami > article > p, .origami > article > h1{
+	color: #845632;
+	border-color: #845632;
+}
+
+.origami > article > p > span{
+	background-color: #845632;
+}
+
+.origami article > h1::after{
+	border-bottom: 5px solid #845632;
+}
+.origami article > h1::before{
+	border-top: 1px solid #845632;
+	border-left: 1px solid #845632;
+}
+
+.origami article > p::after{
+	border-top: 5px solid #845632;
+}
+.origami article > p::before{
+	border-bottom: 1px solid #845632;
+	border-right: 1px solid #845632;
+}
+
+.gallery{
+	width: 100%;
+	/*background-color: #eee;*/
+	flex-wrap: wrap;
+	display: flex;
+	flex-direction: row;
+	box-sizing: border-box;
+	padding: 0px 10% 70px;
+}
+
+.gallery > div{
+	min-width: 300px;
+	margin: 3px;
+	background-color: #a53;
+	flex-grow: 1;
+	cursor: pointer;
+	box-sizing: border-box;
+	padding: 10px;
+	overflow: hidden;
+
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url("../img/gallery-img1.jpg");
+}
+
+.gallery > div::after{
+	padding-top: 63.25%;
+	display: block;
+	content: '';
+}
+
+.gallery > div > a{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0);
+	color: #eee;
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	justify-content: center;
+	transition: all 0.3s ease;
+	opacity: 0;
+}
+
+.gallery > div > a:hover{
+	background-color: rgba(0,0,0,0.75);
+	opacity: 1;
+}
+
+.gallery > div > a > small{
+	color: rgba(100 ,100, 100, 0);
+	border-top: solid 1px #eee;
+	position: relative;
+	width: 80%;
+	margin-left: auto;
+	transition: transform 0.3s ease-out, color 0.4s ease 0.2s;
+	-webkit-transform: translateX(110%);
+    transform: translateX(110%);
+}
+
+.gallery > div > a:hover > small{
+	-webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    color: rgba(150,150,150,1);
+}
+
+.gallery > div > a > small::after, .gallery > div > a > small::before{
+	content: "";
+	position: absolute;
+	display: block;
+}
+
+.gallery > div > a > small::after{
+	top: -5px;
+	left: 0;
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid #eee;
+}
+.gallery > div > a > small::before{
+	top: -11px;
+	left: -7px;
+	width: 17px; 
+	height: 25px; 
+	border-top: 1px solid #eee;
+	border-left: 1px solid #eee;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.cell2{
+	flex-grow: 10 !important;
+}
+
+.cell3{
+	flex-shrink: 3 !important;
+	min-width: 160px !important;
+}
+
+.cell4{
+	flex-shrink: 2 !important;
+	min-width: 200px !important;
+}
+
+.cell5{
+	flex-grow: 2 !important;
+}
+.cell6{
+	flex-shrink: 2 !important;
+	min-width: 150px !important;
+}
+.cell7{
+	flex-shrink: 1 !important;
+	min-width: 150px !important;
+}
+.cell8{
+	flex-shrink: 4 !important;
+	min-width: 170px !important;
+}
+.cell9{
+	flex-grow: 5 !important;
+	min-width: 300px !important;
+}
+.cell10{
+	flex-shrink: 3 !important;
+	min-width: 170px !important;
+}
+.cel11{
+	flex-grow: 10 !important;
+	min-width: 250px !important;
+}
+.cell12{
+	flex-shrink: 1 !important;
+	min-width: 170px !important;
+}
+
+
+
+.pixel-art{
+	background-image: url("../img/sky-large.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.pixel-art > h1{
+    font-family: 'Bit-Daylong11-sRB';
+    text-transform: uppercase;
+    font-size: 2em;
+    text-align: center;
+    padding: 30% 0;
+}
+
+.contact{
+	height: auto;
+}
+
+.contact > div{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(200,200,200,0.95);
+}
+
+.cv{
+	width: 50%;
+	min-height: 70%;
+	border-right: solid 1px #051725;
+}
+
+.cv > p{
+	width: 60%;
+	color: #051725;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#skills > thead > tr > th, #skills > tbody > tr > td{
+	color: #051725;
+	text-align: center;
+
+}
+
+#skills{
+	width: 80%;
+	margin: 10em auto;
+	border-collapse: collapse;
+	background-size: 1px;
+}
+
+#skills > thead > tr{
+	border-bottom: solid 1px #051725;
+}
+
+#skills > tbody > tr > td, #skills > thead > tr > th{
+	border-right: solid 1px #051725;
+	box-sizing: border-box;
+	padding: 5px;
+}
+
+#skills > tbody > tr > td:last-child, #skills > thead > tr > th:last-child{
+	border-right: none;
+}
+
+dl{
+	width: 60%;
+	margin: 0 auto 5em;
+	bottom: 0;
+}
+
+dl > dd, dl > dt{
+	font-size: 0.8em;
+	color: #051725;
+}
+
+dd{
+	margin-left: 2em;
+}
+
+footer{
+	height: 200px !important;
+	z-index: -1;
+	bottom: 0px;
+	left: 0;
+	right: 0;
+	background-image: url("../img/irongrip.png");
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+footer > ul{
+	width: 70%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	padding: 10px 0 35px;
+}
+
+footer > ul > li{
+	text-align: center;
+	flex-grow: 1;
+}
+
+footer > small{
+	margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 599px)
+{
+	.sectOne{
+		background-position: 50% 50%;
+	}
+	.header{
+		background-position: 50% 50%;
+	}
+
+	article{
+		width: 70%;
+	}
+
+	article > h1, article > p{
+		min-width: 200px;
+	}
+
+	article > h1{
+		font-size: 1.7em;
+	}
+
+	article > p{
+		font-size: 0.8em;
+	}
+
+	nav{
+		position: absolute;
+		width: 100%;
+	}
+
+	nav > ul{
+		display: none;
+		background-color: #eee;
+		padding: 20px;
+	}
+
+	nav > ul > li > a, nav > ul > li > span{
+		font-size: 1.5em;
+	}
+
+	.derulant > ul > li > a{
+		font-size: 1.2em;
+		margin-left: 20px;
+	}
+
+	.derulant > a{
+		display: none;
+	}
+	.derulant > span{
+		display: block;
+	}
+
+	.expand{
+		display: block;
+		margin: 20px;
+	}
+
+	.expand > span{
+		display: block;
+		background-color: #eee;
+		width: 35px;
+		height: 4px;
+		margin: 5px;
+		border-radius: 10px;
+	}
+
+	nav:hover > ul{
+		display: block;
+	}
+
+	nav:hover > .expand{
+		display: none;
+	}
+
+	.projects > h1, .contact > div > h1{
+		padding: 30px 0px;
+		font-size: 1.7em;
+	}
+
+	.carousel{
+		padding: 30px 0px;
+	}
+
+	.carousel-control{
+		display: none;
+	}
+
+	.selected-item{
+		padding-bottom: 30px;
+	}
+
+	.selected-item > time{
+		margin-left: 15px;
+	}
+
+	.selected-item > time, .selected-item > small{
+		display: inline-block;
+		height: 15px;
+		line-height: 20px;
+		font-size: 0.7em;
+	}
+	.selected-item > small{
+		margin-right: 15px;
+	}
+
+	.selected-item > img{
+		width: 100%;
+		padding: 30px 0 5px 0;
+	}
+
+	.selected-item > h2{
+		padding: 15px 0 20px 0;
+		margin: 0 auto 20px auto;
+		width: 70%;
+		font-size: 1.5em;
+	}
+
+	.selected-item > p{
+		font-size: 0.7em;
+		width: 80%;
+	}
+
+	.btn-case{
+		margin: 35px auto 0;
+		width: 120px;
+		height: 30px;
+		padding: 3px;
+	}
+
+	.btn{
+		font-size: 0.7em;
+	}
+
+	.projects > hr{
+		padding-bottom: 30px;
+	}
+
+	.origami > h1{
+		padding: 40px 0;
+	}
+
+	.origami > article{
+		margin: 150px 0 100px;
+	}
+
+	.gallery{
+		padding: 3px;
+	}
+
+	footer{
+		height: 150px !important;
+	}
+
+	footer > ul{
+		width: 80%;
+	}
+
+	footer > ul > li{
+		font-size: 0.8em;
+	}
+
+	footer > small{
+		font-size: 0.7em;
+	}
+
+	.cv{
+		width: 100%;
+		border-bottom: solid 1px #051725;
+		border-right: none;
+		justify-content: flex-start;
+	}
+
+	.cv > p{
+		margin-top: 3em;
+	}
+
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+
+	#skills{
+		margin: 5em auto;
+	}
+
+	thead tr{
+		position: absolute;
+		top: -2000px;
+		left: -2000px;
+	}
+
+	tr{
+		margin-bottom: 10px;
+	}
+
+	td{
+		border-right: none !important;
+		/*border-bottom: solid 1px #051725;*/
+		position: relative;
+		padding-left: 50% !important;
+	}
+
+	tr > td:last-child{
+		border-bottom: solid 1px #051725;
+		padding-bottom: 15px !important;
+	}
+
+	td:before{
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		width: 45%;
+		padding-right: 5px;
+		font-weight: bold;
+	}
+
+	td:nth-of-type(1):before{
+		content: "Name"
+	}
+	td:nth-of-type(2):before{
+		content: "Level"
+	}
+	td:nth-of-type(3):before{
+		content: "Description"
+	}
+
+
+
+}
+
+@media screen and (max-width: 899px) and (min-width: 600px)
+{
+
+	.sectOne{
+		background-position: 70% 50%;
+	}
+	.header{
+		background-position: 70% 50%;
+	}
+
+	article{
+		width: 58%;
+
+	}
+
+	article > h1, article > p{
+		min-width: 250px;
+	}
+
+	article > h1{
+		font-size: 1.5em;
+	}
+
+	article > p{
+		font-size: 0.8em;
+	}
+
+	nav{
+		min-width: 200px;
+	}
+
+	.derulant > a{
+		display: none;
+	}
+	.derulant > span{
+		display: block;
+	}
+
+	nav>ul>li>a, .derulant > span{
+		font-size: 1.5em;
+	}
+
+	nav>ul>li>ul>li>a{
+		color: #051725;
+		font-size: 1em;
+	}
+
+	.projects > h1, .contact > div > h1{
+		padding: 30px 0px;
+		font-size: 2em;
+	}
+
+	.carousel{
+		padding: 30px 0px;
+	}
+
+	.carousel-control{
+		display: none;
+	}
+
+	.selected-item{
+		padding-bottom: 30px;
+	}
+
+	.selected-item > time{
+		margin-left: 16%;
+	}
+
+	.selected-item > time, .selected-item > small{
+		display: inline-block;
+		height: 15px;
+		line-height: 20px;
+		font-size: 0.7em;
+	}
+	.selected-item > small{
+		margin-right: 16%;
+	}
+
+	.selected-item > img{
+		width: 70%;
+		display: block;
+		padding: 30px 0 5px 0;
+	}
+
+	.selected-item > h2{
+		padding: 15px 0 20px 0;
+		margin: 0 auto 20px auto;
+		width: 50%;
+		font-size: 1.5em;
+	}
+
+	.selected-item > p{
+		font-size: 0.7em;
+		width: 70%;
+	}
+
+	.btn-case{
+		margin: 35px auto 0;
+		width: 120px;
+		height: 30px;
+		padding: 3px;
+	}
+
+	.btn{
+		font-size: 0.7em;
+	}
+
+	.projects > hr{
+		padding-bottom: 30px;
+	}
+
+	.origami > h1{
+		padding: 40px 0;
+	}
+
+	.origami > article{
+		margin: 150px 0 100px;
+	}
+
+	.gallery{
+		padding: 3px;
+	}
+
+	.cv{
+		width: 100%;
+		border-bottom: solid 1px #051725;
+		border-right: none;
+		justify-content: flex-start;
+	}
+
+	.cv > p{
+		margin-top: 3em;
+	}
+
+	#skills{
+		margin: 5em auto;
+	}
+}
+
+@media screen and (max-width: 1400px) and (min-width: 900px)
+{
+
+	.sectOne{
+		background-position: 75% 50%;
+	}
+	.header{
+		background-position: 75% 50%;
+	}
+
+	article  > p 
+	{
+		font-size: 1em;
+	}
+}
+
+
+
+
+
+
+
